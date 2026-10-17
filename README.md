@@ -1,38 +1,50 @@
-# cataleg-vinyls-vue
+🎵 Catàleg de Vinils
+1. Temàtica i descripció de l'aplicació
 
-This template should help get you started developing with Vue 3 in Vite.
+Aquesta aplicació és un catàleg de vinils desenvolupat amb Vue 3 i Firebase. Permet consultar una col·lecció de discos de vinil mostrant informació com el títol, l'artista, el gènere musical i la imatge de portada. Les dades s'emmagatzemen a Cloud Firestore i l'aplicació està desplegada a Firebase Hosting.
 
-## Recommended IDE Setup
+2. Instal·lació del projecte
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Clonar el repositori GitHub i instal·lar les dependències necessàries amb la comanda:
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
 npm install
-```
 
-### Compile and Hot-Reload for Development
+3. Execució en mode desenvolupament
 
-```sh
+Per iniciar el servidor de desenvolupament executar:
+
 npm run dev
-```
 
-### Compile and Minify for Production
+Després obrir el navegador a l'adreça local indicada per Vite.
 
-```sh
+4. Generació de la versió de producció
+
+Per generar la versió optimitzada del projecte executar:
+
 npm run build
-```
+
+Els fitxers resultants es generen dins la carpeta dist.
+
+5. Desplegament
+
+Per publicar l'aplicació a Firebase Hosting executar:
+
+firebase deploy
+
+L'aplicació quedarà disponible a l'URL proporcionada per Firebase.
+
+6. Tecnologies utilitzades
+Vue 3
+Vite
+JavaScript
+HTML5
+CSS3
+Firebase
+Cloud Firestore
+Firebase Hosting
+7. Configuració i regles de Firestore
+
+El projecte utilitza el fitxer firestore.rules amb les següents regles de seguretat:
+
+Lectura pública de les dades.
+Escriptura bloquejada per als usuaris no autoritzats.

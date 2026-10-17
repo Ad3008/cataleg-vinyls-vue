@@ -1,5 +1,4 @@
 <script setup>
-// Declarem les props que rep el component fill des del component pare
 defineProps({
   titol: {
     type: String,
