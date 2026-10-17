@@ -48,3 +48,26 @@ El projecte utilitza el fitxer firestore.rules amb les següents regles de segur
 
 Lectura pública de les dades.
 Escriptura bloquejada per als usuaris no autoritzats.
+
+8. Relació dels components propis i la seva funció
+- barra-navegacio.vue: Capçalera amb el menú de navegació entre vistes mitjançant RouterLink.
+- targeta-vinyl.vue: Component que mostra la fitxa visual de cada disc de vinil.
+- peu-pagina.vue: Peu de pàgina amb els crèdits d'autoria del projecte.
+
+9. Exemple de comunicació amb props (Pare a Fill)
+- Component pare: src/views/cataleg.vue
+- Component fill: src/components/targeta-vinyl.vue
+- Dades que es passen: El pare llegeix els vinils de Firestore i passa al fill les props declarades titol (String), artista (String), any (Number) i edicio (String).
+
+10. Relació de les tres rutes (Vue Router)
+- / (inici.vue): Pàgina de benvinguda i presentació amb un vinil destacat.
+- /cataleg (cataleg.vue): Vista que carrega i mostra el catàleg de vinils des de Cloud Firestore.
+- /sobre (sobreview.vue): Pàgina informativa sobre el projecte i l'equip de so.
+
+11. Col·lecció de Firestore, camps i vista
+- Col·lecció: vinyls
+- Camps principals: Album name (string), Artist (string), Edition (string) i Year (int64/number).
+- Vista que mostra les dades: src/views/cataleg.vue (ruta /cataleg).
+
+12. Enllaç a la web publicada amb Firebase Hosting
+https://cataleg-vinyls-vue.web.app
